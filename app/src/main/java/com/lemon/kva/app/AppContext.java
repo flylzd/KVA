@@ -13,6 +13,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import cn.smssdk.SMSSDK;
+
 
 public class AppContext extends Application {
 
@@ -36,6 +38,7 @@ public class AppContext extends Application {
     }
 
     private void init() {
+
         VolleySingleton.init(this);
     }
 

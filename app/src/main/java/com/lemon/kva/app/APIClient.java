@@ -7,12 +7,15 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.error.AuthFailureError;
 import com.android.volley.error.VolleyError;
+import com.lemon.kva.constant.Config;
 import com.lemon.kva.constant.Urls;
+import com.lemon.kva.model.BaseModel;
 import com.lemon.kva.util.Logger;
 import com.lemon.kva.volley.GsonPostRequest;
 import com.lemon.kva.volley.ResponseListener;
 import com.lemon.kva.volley.VolleySingleton;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class APIClient {
@@ -37,6 +40,25 @@ public class APIClient {
 //        GsonPostRequest request = createGsonPostRequest(url, requestParams, BaseModel.class, listener);
 //        request.setTag(tag);
 //        requestQueue.add(request);
+
+    }
+
+    public static  void register(String tag, String phonenumber,String password, String verCode,  ResponseListener listener) {
+
+        listener.onStarted();
+
+        Map<String, String> requestParams = new HashMap<String,String>();
+        requestParams.put("phonenumber", phonenumber);
+        requestParams.put("userName", phonenumber);
+        requestParams.put("password", password);
+        requestParams.put("verCode", verCode);
+        requestParams.put("appKey", Config.APPKEY);
+        requestParams.put("zone", "86");
+
+        String url = Urls.URL_REGISTER;
+        GsonPostRequest request = createGsonPostRequest(url, requestParams, BaseModel.class, listener);
+        request.setTag(tag);
+        requestQueue.add(request);
 
     }
 
