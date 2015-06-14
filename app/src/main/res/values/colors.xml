@@ -7,7 +7,14 @@
 
     <color name="main_tab_background">#373639</color>
 
+    <color name="main_text_black">#272727</color>
+    <color name="main_text">#9c9c9c</color>
+
+    <color name="bg_layout_pressed">#aeaeae</color>
+
     <color name="bg_horizontal_line">#d7d7d7</color>
+
+    <color name="bg_actionbar">#ef342b</color>
 
 
 </resources>

@@ -26,5 +26,11 @@
     <string name="register_ver_code_hint">输入验证码</string>
     <string name="register_ver_code">发送验证码</string>
 
+    <string name="me_gold">金币</string>
+    <string name="me_my">我的漫音</string>
+    <string name="me_score">给我们评分</string>
+    <string name="me_feedback">意见和反馈</string>
+    <string name="me_about">关于我们</string>
+    <string name="me_setting">设置</string>
 
 </resources>

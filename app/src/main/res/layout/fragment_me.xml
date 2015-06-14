@@ -1,11 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Me"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_layout_height"
+        android:background="@color/bg_actionbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/main_tab_me"
+            android:textColor="@color/white"
+            android:textSize="@dimen/actionbar_title_size" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/imgAvatar"
+            android:text="漫音"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/imgMeGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_coin" />
+
+        <TextView
+            style="@style/textMe"
+            android:layout_toRightOf="@+id/imgMeGold"
+            android:text="@string/me_gold" />
+
+        <TextView
+            android:id="@+id/tvMeGold"
+            style="@style/textMeRight"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text="8888" />
+
+        <!--<ImageView-->
+        <!--android:layout_toRightOf="@+id/tvMeGold"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/icon_arrow_right"-->
+        <!--android:layout_height="wrap_content" />-->
+    </RelativeLayout>
+
+    <include layout="@layout/view_horizontal_line" />
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_me" />
+
+        <TextView
+            style="@style/textMe"
+            android:layout_toRightOf="@+id/imgMe"
+            android:text="@string/me_my" />
+
+        <TextView
+            android:id="@+id/tvMeMy"
+            style="@style/textMeRight"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text="8888" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/imgMeScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_score" />
+
+        <TextView
+            style="@style/textMe"
+            android:layout_toRightOf="@+id/imgMeScore"
+            android:text="@string/me_score" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_horizontal_line" />
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgMeFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_feedback" />
+
+        <TextView
+            style="@style/textMe"
+            android:layout_toRightOf="@+id/imgMeFeedback"
+            android:text="@string/me_feedback" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_horizontal_line" />
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgMeAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_about" />
+
+        <TextView
+            style="@style/textMe"
+            android:layout_toRightOf="@+id/imgMeAbout"
+            android:text="@string/me_about" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/imgMeSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_setting" />
+
+        <TextView
+            style="@style/textMe"
+            android:layout_toRightOf="@+id/imgMeSetting"
+            android:text="@string/me_setting" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/bg_actionbar"
+        android:text="退出登陆"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
 
 </LinearLayout>
