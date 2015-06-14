@@ -91,10 +91,7 @@ public class RegisterActivity extends ActionBarActivity {
 
             }
         });
-
-
     }
-
 
     private void initSDK() {
         // 初始化短信SDK

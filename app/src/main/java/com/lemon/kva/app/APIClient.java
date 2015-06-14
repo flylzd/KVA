@@ -25,21 +25,19 @@ public class APIClient {
     public static final RequestQueue requestQueue = VolleySingleton.getRequestQueue();
 
 
-    public static  void login(String tag, ResponseListener listener) {
+    public static  void login(String tag,String username, String password, ResponseListener listener) {
 
         listener.onStarted();
 
-//        Map<String, String> requestParams = getSignatureMap();
-//        requestParams.put("keywords", username);
-//        requestParams.put("password", passwrod);
-//        requestParams.put("valicode", valicode);
-//        requestParams.put("q", "action/login");
-//        requestParams.put(Urls.ACTION, "users");
-//
-//        String url = Urls.ACTION_INDEX;
-//        GsonPostRequest request = createGsonPostRequest(url, requestParams, BaseModel.class, listener);
-//        request.setTag(tag);
-//        requestQueue.add(request);
+
+        Map<String, String> requestParams = new HashMap<String,String>();
+        requestParams.put("j_username", username);
+        requestParams.put("j_password", password);
+
+        String url = Urls.SERVER_URL + "/clientLogin";
+        GsonPostRequest request = createGsonPostRequest(url, requestParams, BaseModel.class, listener);
+        request.setTag(tag);
+        requestQueue.add(request);
 
     }
 

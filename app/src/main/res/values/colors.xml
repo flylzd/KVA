@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="windowBackground">#f0f0f0</color>
+
+    <color name="main_tab_background">#373639</color>
+
+    <color name="bg_horizontal_line">#d7d7d7</color>
+
+
+</resources>

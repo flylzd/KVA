@@ -4,8 +4,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageView;
 
 import com.lemon.kva.R;
+import com.lemon.kva.ui.fragment.FavFragment;
+import com.lemon.kva.ui.fragment.HomeFragment;
+import com.lemon.kva.ui.fragment.MeFragment;
+import com.lemon.kva.ui.fragment.NoticeFragment;
+import com.lemon.kva.view.fragmentswitcher.FragmentStateArrayPagerAdapter;
+import com.lemon.kva.view.fragmentswitcher.FragmentSwitcher;
 
 import java.util.HashMap;
 
@@ -14,31 +23,108 @@ import cn.smssdk.SMSSDK;
 import cn.smssdk.gui.RegisterPage;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+
+    private static final String TAG = "MainActivity";
+
+    private FragmentSwitcher fragmentSwitcher;
+    private FragmentStateArrayPagerAdapter fragmentAdapter;
+
+    private View layoutTabHome;
+    private View layoutTabFav;
+    private View layoutTabPublish;
+    private View layoutTabNotice;
+    private View layoutTabMe;
+
+    private ImageView imgTabHome;
+    private ImageView imgTabFav;
+    private ImageView imgTabNotice;
+    private ImageView imgTabMe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //隐藏标题栏
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
+        initFragmentSwitcher();
+        initView();
+
+    }
+
+    private void initView() {
+
+        layoutTabHome = findViewById(R.id.layoutTabHome);
+        layoutTabFav = findViewById(R.id.layoutTabFav);
+        layoutTabPublish = findViewById(R.id.layoutTabPublish);
+        layoutTabNotice = findViewById(R.id.layoutTabNotice);
+        layoutTabMe = findViewById(R.id.layoutTabMe);
+
+        layoutTabHome.setOnClickListener(this);
+        layoutTabFav.setOnClickListener(this);
+        layoutTabPublish.setOnClickListener(this);
+        layoutTabNotice.setOnClickListener(this);
+        layoutTabMe.setOnClickListener(this);
+
+        imgTabHome = (ImageView) findViewById(R.id.imgTabHome);
+        imgTabFav = (ImageView) findViewById(R.id.imgTabFav);
+        imgTabNotice = (ImageView) findViewById(R.id.imgTabNotice);
+        imgTabMe = (ImageView) findViewById(R.id.imgTabMe);
+        imgTabHome.setSelected(true);
+    }
+
+    private void initFragmentSwitcher() {
+        fragmentSwitcher = (FragmentSwitcher) findViewById(R.id.fragment_container);
+        fragmentAdapter = new FragmentStateArrayPagerAdapter(getSupportFragmentManager());
+        fragmentSwitcher.setAdapter(fragmentAdapter);
+
+//        HomeFragment homeFragment = HomeFragment.newInstance();
+        HomeFragment homeNewFragment = HomeFragment.newInstance();
+        FavFragment favFragment = FavFragment.newInstance();
+        NoticeFragment noticeFragment = NoticeFragment.newInstance();
+        MeFragment meFragment = MeFragment.newInstance();
+
+//        fragmentAdapter.add(homeFragment);
+        fragmentAdapter.add(homeNewFragment);
+        fragmentAdapter.add(favFragment);
+        fragmentAdapter.add(noticeFragment);
+        fragmentAdapter.add(meFragment);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        imgNoSelected();
+        switch (v.getId()){
+            case R.id.layoutTabHome:
+                imgTabHome.setSelected(true);
+                fragmentSwitcher.setCurrentItem(0);
+                break;
+            case R.id.layoutTabFav:
+                imgTabFav.setSelected(true);
+                fragmentSwitcher.setCurrentItem(1);
+                break;
+            case R.id.layoutTabPublish:
+                break;
+            case R.id.layoutTabNotice:
+                imgTabNotice.setSelected(true);
+                fragmentSwitcher.setCurrentItem(2);
+                break;
+            case R.id.layoutTabMe:
+                imgTabMe.setSelected(true);
+                fragmentSwitcher.setCurrentItem(3);
+                break;
+        }
+    }
 
 
-//        //打开注册页面
-//        RegisterPage registerPage = new RegisterPage();
-//        registerPage.setRegisterCallback(new EventHandler() {
-//            public void afterEvent(int event, int result, Object data) {
-//                // 解析注册结果
-//                if (result == SMSSDK.RESULT_COMPLETE) {
-//                    @SuppressWarnings("unchecked")
-//                    HashMap<String, Object> phoneMap = (HashMap<String, Object>) data;
-//                    String country = (String) phoneMap.get("country");
-//                    String phone = (String) phoneMap.get("phone");
-//                    // 提交用户信息
-////                   registerUser(country, phone);
-//                }
-//            }
-//        });
-//        registerPage.show(MainActivity.this);
+    private void imgNoSelected(){
+        imgTabHome.setSelected(false);
+        imgTabFav.setSelected(false);
+        imgTabNotice.setSelected(false);
+        imgTabMe.setSelected(false);
     }
 
 
@@ -63,4 +149,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
