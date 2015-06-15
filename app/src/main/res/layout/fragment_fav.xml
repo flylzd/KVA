@@ -10,6 +10,7 @@
         android:background="@color/bg_actionbar">
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -18,6 +19,7 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/rbFavFocus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_bg_left_fav"
@@ -28,6 +30,7 @@
                 android:textColor="@drawable/selector_color_fav" />
 
             <RadioButton
+                android:id="@+id/rbFavCollect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_bg_right_fav"
@@ -38,5 +41,11 @@
 
         </RadioGroup>
     </RelativeLayout>
+
+    <com.lemon.kva.view.EndOfListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent" />
 
 </LinearLayout>

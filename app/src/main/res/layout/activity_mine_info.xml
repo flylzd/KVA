@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/mine_info_avatar"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imgRightArrow"
+            android:src="@drawable/icon_default_avatar" />
+
+        <ImageView
+            android:id="@+id/imgRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            style="@style/textMe"
+            android:text="@string/mine_info_nickname" />
+
+        <TextView
+            android:id="@+id/tvMineNickName"
+            style="@style/textMeRight"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text="8888" />
+    </RelativeLayout>
+
+    <include layout="@layout/view_horizontal_line" />
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/textMe"
+            android:text="@string/mine_info_signature" />
+
+        <TextView
+            android:id="@+id/tvMineSignature"
+            style="@style/textMeRight"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text="漫画爱好者" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            style="@style/textMe"
+            android:text="@string/mine_info_sex" />
+
+        <TextView
+            android:id="@+id/tvMineSex"
+            style="@style/textMeRight"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text="男" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/layoutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            style="@style/textMe"
+            android:text="@string/mine_info_password" />
+
+        <TextView
+            style="@style/textMeRight"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+</LinearLayout>
