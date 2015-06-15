@@ -22,6 +22,7 @@
 
     <RelativeLayout
         style="@style/layoutMe"
+        android:id="@+id/layoutMineInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
@@ -51,6 +52,7 @@
 
     <RelativeLayout
         style="@style/layoutMe"
+        android:id="@+id/layoutMeGold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
@@ -84,6 +86,7 @@
     <include layout="@layout/view_horizontal_line" />
 
     <RelativeLayout
+        android:id="@+id/layoutMeManYin"
         style="@style/layoutMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -110,6 +113,7 @@
 
     <RelativeLayout
         style="@style/layoutMe"
+        android:id="@+id/layoutMeScore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
@@ -137,6 +141,7 @@
 
     <RelativeLayout
         style="@style/layoutMe"
+        android:id="@+id/layoutMeFeedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -163,6 +168,7 @@
 
     <RelativeLayout
         style="@style/layoutMe"
+        android:id="@+id/layoutMeAbout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -187,6 +193,7 @@
 
     <RelativeLayout
         style="@style/layoutMe"
+        android:id="@+id/layoutMeSetting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
@@ -211,6 +218,7 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"

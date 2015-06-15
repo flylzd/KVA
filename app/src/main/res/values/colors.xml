@@ -16,5 +16,9 @@
 
     <color name="bg_actionbar">#ef342b</color>
 
+    <!--<color name="actionbar_background">#ff5601</color>-->
+    <color name="actionbar_item_background_normal">@color/transparent</color>
+    <color name="actionbar_item_background_pressed">#3b351e</color>
+
 
 </resources>
