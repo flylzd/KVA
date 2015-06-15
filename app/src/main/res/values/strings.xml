@@ -9,7 +9,10 @@
     <string name="main_tab_notice">动态</string>
     <string name="main_tab_me">我的</string>
 
-    <string name="title_mine_info">个人信息</string>
+    <string name="title_mine_info">我的信息</string>
+    <string name="title_fans">粉丝</string>
+    <string name="title_comment">评论</string>
+    <string name="title_contribution">贡献</string>
 
     <string name="message_sumbit">正在提交数据...</string>
     <string name="message_wait">正在加载数据...</string>

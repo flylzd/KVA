@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:paddingLeft="20dp">
+
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_default_avatar" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgAvatar"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/imgAvatar"
+        android:text="鸣人XXX"
+        android:textColor="@color/main_text_black"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvName"
+        android:layout_below="@+id/tvName"
+        android:layout_marginTop="4dp"
+        android:text="鸣人XXX"
+        android:textColor="@color/main_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvComment"
+        android:layout_below="@+id/tvComment"
+        android:layout_marginTop="4dp"
+        android:text="鸣人XXX"
+        android:background="@android:color/black"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvTitle"
+        android:text="9天前"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/main_text"
+        android:textSize="16sp" />
+
+</RelativeLayout>
