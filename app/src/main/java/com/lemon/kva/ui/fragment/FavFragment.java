@@ -81,7 +81,6 @@ public class FavFragment extends Fragment {
             dataList.add("22222");
         }
         adapter.replaceAll(dataList);
-
     }
 
 }
