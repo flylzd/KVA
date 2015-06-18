@@ -8,6 +8,7 @@ import com.lemon.kva.ui.activity.MineInfoActivity;
 import com.lemon.kva.ui.activity.NoticeCommentActivity;
 import com.lemon.kva.ui.activity.NoticeContributionActivity;
 import com.lemon.kva.ui.activity.NoticeFansActivity;
+import com.lemon.kva.ui.activity.PublishActivity;
 import com.lemon.kva.ui.activity.RegisterActivity;
 
 public class UIHelper {
@@ -34,6 +35,11 @@ public class UIHelper {
 
     public static  void showNoticeContribution(Context context){
         Intent intent = new Intent(context, NoticeContributionActivity.class);
+        context.startActivity(intent);
+    }
+
+    public static  void showPublish(Context context){
+        Intent intent = new Intent(context, PublishActivity.class);
         context.startActivity(intent);
     }
 }

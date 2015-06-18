@@ -13,6 +13,7 @@
     <string name="title_fans">粉丝</string>
     <string name="title_comment">评论</string>
     <string name="title_contribution">贡献</string>
+    <string name="title_publish">发布</string>
 
     <string name="message_sumbit">正在提交数据...</string>
     <string name="message_wait">正在加载数据...</string>

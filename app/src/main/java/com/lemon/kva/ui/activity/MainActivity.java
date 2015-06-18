@@ -13,6 +13,7 @@ import com.lemon.kva.ui.fragment.FavFragment;
 import com.lemon.kva.ui.fragment.HomeFragment;
 import com.lemon.kva.ui.fragment.MeFragment;
 import com.lemon.kva.ui.fragment.NoticeFragment;
+import com.lemon.kva.util.UIHelper;
 import com.lemon.kva.view.fragmentswitcher.FragmentStateArrayPagerAdapter;
 import com.lemon.kva.view.fragmentswitcher.FragmentSwitcher;
 
@@ -107,6 +108,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 fragmentSwitcher.setCurrentItem(1);
                 break;
             case R.id.layoutTabPublish:
+                UIHelper.showPublish(MainActivity.this);
                 break;
             case R.id.layoutTabNotice:
                 imgTabNotice.setSelected(true);
